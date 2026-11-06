@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu Management | Juniper & Stone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu-manager.css">
+
+    <script src="js/owner.js"></script>
+    <script src="js/menu-data.js" defer></script>
+    <script src="js/menu-manager.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                JUNIPER <span>&</span> STONE
+                <small>MENU MANAGEMENT</small>
+            </a>
+
+            <div class="manager-nav">
+
+                <a href="owner.html" class="nav-button">
+                    Dashboard
+                </a>
+
+                <button type="button" id="logoutBtn" class="manager-logout">
+                    Logout
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="manager-main">
+
+        <div class="manager-heading">
+
+            <div>
+                <p class="eyebrow">RESTAURANT MANAGEMENT</p>
+
+                <h1>Manage Your <span>Menu</span></h1>
+
+                <p>
+                    Add dishes, update prices and manage availability.
+                </p>
+            </div>
+
+            <!-- PREVIEW CUSTOMER MENU -->
+
+            <a
+                href="menu.html?from=manager"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="preview-menu-btn"
+            >
+                Preview Customer Menu ↗
+            </a>
+
+        </div>
+
+
+        <!-- SUMMARY -->
+
+        <div class="menu-summary">
+
+            <div class="summary-card">
+                <span>Total Items</span>
+                <strong id="totalItems">0</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Available</span>
+                <strong id="availableItems">0</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Unavailable</span>
+                <strong id="unavailableItems">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- ADD / EDIT FORM -->
+
+        <section class="manager-panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <p class="eyebrow">MENU EDITOR</p>
+                    <h2 id="formTitle">Add New Food Item</h2>
+                </div>
+
+                <span class="editor-tag">OWNER TOOL</span>
+
+            </div>
+
+
+            <form id="menuItemForm">
+
+                <div class="form-grid">
+
+                    <div class="manager-field">
+
+                        <label for="itemName">Food Name *</label>
+
+                        <input
+                            type="text"
+                            id="itemName"
+                            placeholder="e.g. Grilled Chicken"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="manager-field">
+
+                        <label for="itemCategory">Category *</label>
+
+                        <select id="itemCategory" required>
+                            <option value="starters">Starters</option>
+                            <option value="mains">Main Course</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="drinks">Drinks</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="manager-field">
+
+                        <label for="itemPrice">Price ($) *</label>
+
+                        <input
+                            type="number"
+                            id="itemPrice"
+                            placeholder="e.g. 18"
+                            min="0"
+                            max="999999"
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="manager-field">
+
+                        <label for="itemImageUrl">Food Image URL</label>
+
+                        <input
+                            type="url"
+                            id="itemImageUrl"
+                            placeholder="https://example.com/food.jpg"
+                        >
+
+                    </div>
+
+
+                    <div class="manager-field full-width">
+
+                        <label for="itemDescription">
+                            Food Description *
+                        </label>
+
+                        <textarea
+                            id="itemDescription"
+                            rows="3"
+                            maxlength="300"
+                            placeholder="Describe the dish..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="manager-field full-width">
+
+                        <label for="itemImageFile">
+                            Or Upload Food Photograph
+                        </label>
+
+                        <input
+                            type="file"
+                            id="itemImageFile"
+                            accept="image/jpeg,image/png,image/webp"
+                        >
+
+                        <small>
+                            JPG, PNG or WebP. Images will be resized for the demo.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="upload-preview" id="imagePreviewContainer" hidden>
+
+                    <img id="imagePreview" alt="Food image preview">
+
+                    <span>Image Preview</span>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button type="submit" class="save-item-btn" id="saveItemBtn">
+                        + Add Food Item
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-edit-btn"
+                        id="cancelEditBtn"
+                        hidden
+                    >
+                        Cancel Editing
+                    </button>
+
+                </div>
+
+
+                <p
+                    id="managerStatus"
+                    class="manager-status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- FOOD ITEM LIST -->
+
+        <section class="manager-panel item-list-panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <p class="eyebrow">YOUR RESTAURANT MENU</p>
+                    <h2>Food Items</h2>
+                </div>
+
+                <span class="item-count" id="itemCount">0 items</span>
+
+            </div>
+
+
+            <div id="managedMenuList" class="managed-menu-list">
+                <!-- Items generated by JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <a href="index.html" class="footer-logo">
+            JUNIPER & STONE
+        </a>
+
+        <p>Restaurant Owner Workspace</p>
+
+        <p class="copyright">
+            © 2026 Juniper & Stone. Demonstration website.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+/* OWNER DASHBOARD */
+
+.owner-tool-card {
+    max-width: 570px;
+    margin: 35px auto;
+
+    padding: 35px 25px;
+
+    background: var(--cream);
+    border: 1px solid var(--border);
+
+    text-align: center;
+}
+
+.owner-tool-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: var(--dark-green);
+    color: white;
+
+    font-family: var(--heading-font);
+    font-size: 23px;
+    font-weight: 700;
+
+    border-radius: 12px;
+}
+
+.owner-tool-card h2 {
+    font-family: var(--heading-font);
+
+    font-size: 25px;
+    font-weight: 500;
+
+    color: var(--dark-green);
+
+    margin-bottom: 12px;
+}
+
+.owner-tool-card p {
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+.owner-tool-button {
+    width: 100%;
+}
+
+.qr-information p {
+    margin-bottom: 8px;
+}
+
+
+/* OWNER NAVIGATION */
+
+.owner-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.owner-logout {
+    border: 1px solid var(--dark-green);
+    cursor: pointer;
+    font-family: var(--body-font);
+}
+
+.owner-logout:hover {
+    background: #a84c40;
+    border-color: #a84c40;
+}
+
+
+@media (max-width: 600px) {
+
+    .owner-nav-actions {
+        gap: 6px;
+    }
+
+    .owner-nav-actions .nav-button {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+}

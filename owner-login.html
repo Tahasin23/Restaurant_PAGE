@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Owner Login | Juniper & Stone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/owner-login.css">
+
+    <script src="js/owner-login.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="login-header">
+
+        <a href="index.html" class="brand">
+            JUNIPER <span>&</span> STONE
+            <small>OWNER WORKSPACE</small>
+        </a>
+
+        <a href="index.html" class="website-button">
+            View Website
+        </a>
+
+    </header>
+
+
+    <!-- LOGIN SECTION -->
+
+    <main class="login-main">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                JS
+            </div>
+
+            <p class="eyebrow">OWNER ACCESS</p>
+
+            <h1>
+                Welcome <span>Back.</span>
+            </h1>
+
+            <p class="description">
+                Sign in to manage your restaurant's
+                digital experience.
+            </p>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <p
+                    id="loginError"
+                    class="error-message"
+                    role="alert"
+                    aria-live="polite"
+                ></p>
+
+
+                <button type="submit" class="login-button">
+                    Sign In →
+                </button>
+
+            </form>
+
+
+            <div class="card-footer">
+                Restaurant Owner Workspace
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="login-footer">
+
+        <h2>JUNIPER & STONE</h2>
+
+        <p>Good food. Good company. Always.</p>
+
+        <div class="footer-bottom">
+            © 2026 Juniper & Stone. Demonstration website.
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore the digital food menu of Juniper & Stone.">
+
+    <meta name="theme-color" content="#f8f6f0">
+
+    <title>Digital Menu | Juniper & Stone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Shared menu database must load first -->
+
+    <script src="js/menu-data.js" defer></script>
+
+    <!-- Website functionality -->
+
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                JUNIPER <span>&</span> STONE
+
+                <small>KITCHEN · GRILL · GATHER</small>
+
+            </a>
+
+            <!-- Back destination changes according to entry point -->
+
+            <a
+                href="index.html"
+                id="menuBackLink"
+                class="nav-button"
+            >
+                Back to Website
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="menu-section section-padding">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    WELCOME TO JUNIPER & STONE
+                </p>
+
+                <h2>
+                    Our Digital <span>Menu</span>
+                </h2>
+
+                <p>
+                    Fresh ingredients. Thoughtfully prepared.
+                    Made for you.
+                </p>
+
+            </div>
+
+
+            <!-- MENU CATEGORIES -->
+
+            <div class="menu-categories">
+
+                <button
+                    class="category-btn active"
+                    data-category="all"
+                    aria-pressed="true"
+                >
+                    All Items
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="starters"
+                    aria-pressed="false"
+                >
+                    Starters
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="mains"
+                    aria-pressed="false"
+                >
+                    Main Course
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="desserts"
+                    aria-pressed="false"
+                >
+                    Desserts
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="drinks"
+                    aria-pressed="false"
+                >
+                    Drinks
+                </button>
+
+            </div>
+
+
+            <!-- DYNAMIC MENU ITEMS -->
+
+            <div class="menu-grid" id="menuGrid">
+
+                <!-- JavaScript loads menu items here -->
+
+            </div>
+
+
+            <div class="menu-footer">
+
+                <p>
+                    Thank you for dining with Juniper & Stone.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <a href="index.html" class="footer-logo">
+            JUNIPER & STONE
+        </a>
+
+        <p>
+            Good food. Good company. Always.
+        </p>
+
+        <p class="copyright">
+            © 2026 Juniper & Stone. Demonstration website.
+        </p>
+
+    </footer>
+
+</body>
+</html>

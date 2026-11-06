@@ -1,0 +1,316 @@
+
+/* =========================================
+   JUNIPER & STONE
+   QR CODE GENERATOR
+========================================= */
+
+.qr-main {
+    min-height: 750px;
+    padding: 90px 7%;
+
+    background: var(--cream);
+}
+
+.qr-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.qr-card {
+    background: var(--white);
+
+    padding: 55px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 15px 45px rgba(24, 59, 50, 0.06);
+
+    text-align: center;
+}
+
+.qr-card h1 {
+    font-family: var(--heading-font);
+
+    font-size: clamp(35px, 5vw, 50px);
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color: var(--dark-green);
+
+    margin-bottom: 20px;
+}
+
+.qr-card h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.qr-description {
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* URL FORM */
+
+.qr-form {
+    max-width: 570px;
+
+    margin: auto;
+
+    text-align: left;
+}
+
+.qr-form label {
+    display: block;
+
+    color: var(--dark-green);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.qr-form input {
+    width: 100%;
+
+    padding: 17px;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+
+    outline: none;
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    font-size: 13px;
+
+    transition: border-color 0.3s ease;
+}
+
+.qr-form input:focus {
+    border-color: var(--gold);
+}
+
+.input-help {
+    margin-top: 9px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.qr-generate-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    border: none;
+}
+
+
+/* STATUS MESSAGE */
+
+.qr-status {
+    min-height: 24px;
+
+    margin-top: 18px;
+
+    color: var(--dark-green);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* QR RESULT */
+
+.qr-result {
+    margin-top: 30px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid var(--border);
+}
+
+.qr-result[hidden] {
+    display: none !important;
+}
+
+.qr-result h2 {
+    font-family: var(--heading-font);
+
+    font-size: 30px;
+
+    color: var(--dark-green);
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.qr-result > p:not(.qr-url-label) {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+/* QR CODE IMAGE CONTAINER */
+
+.qr-code-box {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    margin: 10px auto 25px;
+}
+
+#qrCode {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#qrCode canvas,
+#qrCode img {
+    display: block;
+
+    width: 280px;
+    height: 280px;
+
+    max-width: 100%;
+}
+
+
+/* URL DISPLAY */
+
+.qr-url-label {
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.qr-url-text {
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+/* DOWNLOAD BUTTON */
+
+.qr-download-btn {
+    border: none;
+
+    min-width: 230px;
+}
+
+.qr-download-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* INFORMATION SECTION */
+
+.qr-information {
+    max-width: 570px;
+
+    margin: 50px auto 0;
+
+    padding: 25px;
+
+    background: var(--cream);
+
+    text-align: left;
+}
+
+.qr-information h3 {
+    font-family: var(--heading-font);
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    color: var(--dark-green);
+
+    margin-bottom: 15px;
+}
+
+.qr-information ol {
+    padding-left: 20px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 2.2;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .qr-main {
+        padding: 55px 5%;
+    }
+
+    .qr-card {
+        padding: 35px 22px;
+    }
+
+    .qr-card h1 {
+        font-size: 36px;
+    }
+
+    .qr-description {
+        font-size: 13px;
+    }
+
+    #qrCode canvas,
+    #qrCode img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .qr-information {
+        padding: 20px;
+    }
+
+}

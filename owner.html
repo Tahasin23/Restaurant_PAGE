@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Owner Dashboard | Juniper & Stone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/qr-generator.css">
+    <link rel="stylesheet" href="css/owner.css">
+
+    <script src="js/owner.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                JUNIPER <span>&</span> STONE
+                <small>OWNER WORKSPACE</small>
+            </a>
+
+            <div class="owner-nav-actions">
+
+                <a href="index.html" class="nav-button">
+                    View Website
+                </a>
+
+                <button
+                    type="button"
+                    id="logoutBtn"
+                    class="nav-button owner-logout"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="qr-main">
+
+        <div class="qr-container">
+
+            <div class="qr-card">
+
+                <p class="eyebrow">
+                    RESTAURANT MANAGEMENT
+                </p>
+
+                <h1>
+                    Owner <span>Dashboard</span>
+                </h1>
+
+                <p class="qr-description">
+                    Welcome to your restaurant workspace.
+                    Manage your menu and digital restaurant tools.
+                </p>
+
+
+                <!-- MENU MANAGEMENT -->
+
+                <div class="owner-tool-card">
+
+                    <div class="owner-tool-icon">
+                        M
+                    </div>
+
+                    <h2>Menu Management</h2>
+
+                    <p>
+                        Add new food items, update prices,
+                        change photographs and manage availability.
+                    </p>
+
+                    <a
+                        href="menu-manager.html"
+                        class="btn btn-primary owner-tool-button"
+                    >
+                        Manage Food Menu →
+                    </a>
+
+                </div>
+
+
+                <!-- QR GENERATOR -->
+
+                <div class="owner-tool-card">
+
+                    <div class="owner-tool-icon">
+                        QR
+                    </div>
+
+                    <h2>Digital Menu QR Generator</h2>
+
+                    <p>
+                        Generate and download QR codes that
+                        take customers directly to your digital menu.
+                    </p>
+
+                    <a
+                        href="qr-generator.html"
+                        class="btn btn-primary owner-tool-button"
+                    >
+                        Open QR Generator →
+                    </a>
+
+                </div>
+
+
+                <!-- RESTAURANT INFORMATION -->
+
+                <div class="qr-information">
+
+                    <h3>Restaurant Information</h3>
+
+                    <p>Restaurant: Juniper & Stone</p>
+
+                    <p>Website: Demonstration Project</p>
+
+                    <p>Workspace Status: Development</p>
+
+                    <p>Account: Demo Owner</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <a href="index.html" class="footer-logo">
+            JUNIPER & STONE
+        </a>
+
+        <p>Restaurant Owner Workspace</p>
+
+        <p class="copyright">
+            © 2026 Juniper & Stone. Demonstration website.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Generate a QR code for your Juniper & Stone digital restaurant menu.">
+
+    <title>QR Code Generator | Juniper & Stone</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Existing Website CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- QR Generator CSS -->
+    <link rel="stylesheet" href="css/qr-generator.css">
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- QR Generator JavaScript -->
+    <script src="js/qr-generator.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                JUNIPER <span>&</span> STONE
+                <small>KITCHEN · GRILL · GATHER</small>
+            </a>
+
+            <a href="index.html" class="nav-button">
+                Back to Website
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="qr-main">
+
+        <div class="qr-container">
+
+            <div class="qr-card">
+
+                <p class="eyebrow">
+                    RESTAURANT DIGITAL TOOLS
+                </p>
+
+                <h1>
+                    Create Your <span>Menu QR Code</span>
+                </h1>
+
+                <p class="qr-description">
+                    Generate a QR code for your restaurant's digital menu.
+                    Customers can scan it with their smartphones and
+                    explore your food menu instantly.
+                </p>
+
+
+                <!-- URL FORM -->
+
+                <form id="qrForm" class="qr-form">
+
+                    <label for="menuUrl">
+                        Your Digital Menu URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="menuUrl"
+                        placeholder="https://yourrestaurant.com/menu.html"
+                        required
+                    >
+
+                    <p class="input-help">
+                        Enter your complete public menu page URL.
+                    </p>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary qr-generate-btn"
+                    >
+                        Generate QR Code
+                    </button>
+
+                </form>
+
+
+                <!-- STATUS MESSAGE -->
+
+                <p
+                    id="qrStatus"
+                    class="qr-status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+
+                <!-- GENERATED QR CODE -->
+
+                <section
+                    id="qrResult"
+                    class="qr-result"
+                    hidden
+                >
+
+                    <h2>Your QR Code Is Ready!</h2>
+
+                    <p>
+                        Scan this code to open your restaurant's digital menu.
+                    </p>
+
+                    <div class="qr-code-box">
+
+                        <div id="qrCode"></div>
+
+                    </div>
+
+                    <p class="qr-url-label">
+                        MENU ADDRESS
+                    </p>
+
+                    <p id="qrUrlText" class="qr-url-text"></p>
+
+
+                    <button
+                        type="button"
+                        id="downloadQrBtn"
+                        class="btn btn-primary qr-download-btn"
+                        disabled
+                    >
+                        Download QR Code
+                    </button>
+
+                </section>
+
+
+                <!-- INFORMATION -->
+
+                <div class="qr-information">
+
+                    <h3>How to use your QR code</h3>
+
+                    <ol>
+                        <li>Enter your restaurant's public menu URL.</li>
+                        <li>Generate the QR code.</li>
+                        <li>Download it as a PNG image.</li>
+                        <li>Print it and place it on restaurant tables.</li>
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <a href="index.html" class="footer-logo">
+            JUNIPER & STONE
+        </a>
+
+        <p>
+            Good food. Good company. Always.
+        </p>
+
+        <p class="copyright">
+            © 2026 Juniper & Stone. Demonstration website.
+        </p>
+
+    </footer>
+
+</body>
+</html>
